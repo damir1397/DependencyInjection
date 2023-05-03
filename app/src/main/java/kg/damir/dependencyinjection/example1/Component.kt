@@ -14,6 +14,6 @@ class Component {
         return Computer(monitor, computerTower, keyboard, mouse)
     }
     fun inject(activity: Activity){
-        activity.computer = getComputer()
+//        activity.keyboard = Keyboard()
     }
 }
