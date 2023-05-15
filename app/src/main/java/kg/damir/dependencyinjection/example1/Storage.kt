@@ -1,4 +1,5 @@
 package kg.damir.dependencyinjection.example1
 
-class Storage {
-}
+import javax.inject.Inject
+
+class Storage {}
