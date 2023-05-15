@@ -5,6 +5,7 @@ import android.os.Bundle
 import kg.damir.dependencyinjection.R
 import kg.damir.dependencyinjection.example1.Activity
 import kg.damir.dependencyinjection.example2.di.DaggerApplicationComponent
+import kg.damir.dependencyinjection.example2.di.DataModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,10 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var exampleViewModel: ExampleViewModel
 
-    private val component = DaggerApplicationComponent.create()
+    private val component by lazy {
+        DaggerApplicationComponent.builder().dataModule(DataModule(this)).build()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
 
