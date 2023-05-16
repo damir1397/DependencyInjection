@@ -1,5 +1,6 @@
 package kg.damir.dependencyinjection.example2.di
 
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import kg.damir.dependencyinjection.example2.data.datasource.ExampleRemoteDataSourceImpl
@@ -8,10 +9,8 @@ import kg.damir.dependencyinjection.example2.domain.ExampleRepository
 
 
 @Module
-class DomainModule {
+interface DomainModule {
 
-    @Provides
-    fun provideExampleRepository(impl: ExampleRepositoryImpl): ExampleRepository {
-        return impl
-    }
+    @Binds
+    fun bindsExampleRepository(impl: ExampleRepositoryImpl): ExampleRepository
 }

@@ -1,12 +1,17 @@
 package kg.damir.dependencyinjection.example2.data.network
 
+import android.content.Context
 import android.util.Log
+import kg.damir.dependencyinjection.R
 import javax.inject.Inject
 
-class ExampleApiService @Inject constructor() {
+class ExampleApiService @Inject constructor(
+    private val context: Context,
+    private val system: Long
+) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService")
+        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} ${system} ")
     }
 
     companion object {
