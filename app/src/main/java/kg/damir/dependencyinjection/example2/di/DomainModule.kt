@@ -10,7 +10,6 @@ import kg.damir.dependencyinjection.example2.domain.ExampleRepository
 
 @Module
 interface DomainModule {
-
     @Binds
     fun bindsExampleRepository(impl: ExampleRepositoryImpl): ExampleRepository
 }

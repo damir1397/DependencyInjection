@@ -4,14 +4,16 @@ import android.content.Context
 import android.util.Log
 import kg.damir.dependencyinjection.R
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class ExampleApiService @Inject constructor(
     private val context: Context,
     private val system: Long
 ) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} ${system} ")
+        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} ${system} $this ")
     }
 
     companion object {
