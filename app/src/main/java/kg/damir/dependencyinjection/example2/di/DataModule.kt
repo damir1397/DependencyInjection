@@ -11,9 +11,11 @@ import kg.damir.dependencyinjection.example2.data.datasource.ExampleRemoteDataSo
 
 @Module
 interface DataModule{
+    @ApplicationScope
     @Binds
     fun bindsExampleRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
 
+    @ApplicationScope
     @Binds
     fun bindsExampleLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 }

@@ -9,7 +9,7 @@ import kg.damir.dependencyinjection.example2.presentation.ExampleViewModel
 import kg.damir.dependencyinjection.example2.presentation.MainActivity
 import javax.inject.Singleton
 
-@Singleton
+@ApplicationScope
 @Component(
     modules = [
         DataModule::class,

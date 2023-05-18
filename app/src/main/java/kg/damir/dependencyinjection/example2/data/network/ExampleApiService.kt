@@ -3,10 +3,10 @@ package kg.damir.dependencyinjection.example2.data.network
 import android.content.Context
 import android.util.Log
 import kg.damir.dependencyinjection.R
+import kg.damir.dependencyinjection.example2.di.ApplicationScope
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
 class ExampleApiService @Inject constructor(
     private val context: Context,
     private val system: Long
