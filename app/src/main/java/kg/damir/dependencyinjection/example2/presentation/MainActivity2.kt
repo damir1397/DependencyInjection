@@ -8,7 +8,7 @@ import kg.damir.dependencyinjection.R
 import kg.damir.dependencyinjection.example2.ExampleApp
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
