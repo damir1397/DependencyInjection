@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         ViewModelProvider(this, viewModelFactory)[ExampleViewModel2::class.java]
     }
 
-    private val component by lazy { (application as ExampleApp).component }
+    private val component by lazy { (application as ExampleApp).component.activityComponentFactory().create("MY_ID") }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)

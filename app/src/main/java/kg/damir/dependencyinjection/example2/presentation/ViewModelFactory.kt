@@ -1,9 +1,7 @@
 package kg.damir.dependencyinjection.example2.presentation
 
-import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import kg.damir.dependencyinjection.example2.domain.ExampleUseCase
 import javax.inject.Inject
 import javax.inject.Provider
 

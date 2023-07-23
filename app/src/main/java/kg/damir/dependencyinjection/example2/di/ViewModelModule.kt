@@ -9,7 +9,7 @@ import kg.damir.dependencyinjection.example2.presentation.ExampleViewModel
 import kg.damir.dependencyinjection.example2.presentation.ExampleViewModel2
 
 @Module
-interface ViewModelModule {
+interface  ViewModelModule {
 
     @Binds
     @IntoMap
